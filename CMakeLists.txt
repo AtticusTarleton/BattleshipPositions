@@ -4,4 +4,6 @@ project(BattleshipPositions)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(BattleshipPositions
-    main.cpp)
+    main.cpp
+        board.h
+        ship.h)

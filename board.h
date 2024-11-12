@@ -5,7 +5,11 @@
 #ifndef BOARD_H
 #define BOARD_H
 //this will create the board
-
+class board {
+private:
+    std::string type;
+public:
+};
 
 
 

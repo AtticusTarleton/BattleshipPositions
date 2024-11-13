@@ -76,7 +76,7 @@ public:
         }
         else {
             for(int i = 0; i < size; i++) {
-                changeSquareValue(rowStart, colStart+1, value);
+                changeSquareValue(rowStart, colStart+i, value);
             }
         }
     }

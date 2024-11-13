@@ -34,13 +34,14 @@ int main() {
 
     //3 by 4 board with a 2 by 2 ship
     //rows keep track of vertical, columns of horizontal
-    int row=2,col=2;
+    int row=3,col=3;
     board gameBoard1 = board(row, col);
-    ship ship1 = ship(1, true);
-    ship ship2 = ship(1, true);
+    ship ship1 = ship(3, true);
+    ship ship2 = ship(2, false);
     std::cout <<"num of cols "<< gameBoard1.getCols()<<std::endl;
     std::cout <<"num of rows "<< gameBoard1.getRows()<<std::endl;
     gameBoard1.printBoard();
+    std::cout<<""<<std::endl;
     int counter = 0;
 
     for (int i = 0; i < gameBoard1.getRows(); i++) {
@@ -53,10 +54,11 @@ int main() {
                 for (int q = 0; q < gameBoard1.getRows(); q++) {
                     int w=0;
                     for (w = 0; w < gameBoard1.getCols(); w++) {
-                        if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship1.getOrientationV())) {
+                        if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                             counter++;
-                            gameBoard1.changeShipValues(q,w,ship2.getSize(),2,ship1.getOrientationV());
-
+                            gameBoard1.changeShipValues(q,w,ship2.getSize(),2,ship2.getOrientationV());
+                            gameBoard1.printBoard();//not really printing right for horizontal
+                            std::cout<<counter<<std::endl;
                             gameBoard1.resetBoard(2);
                         }
                     }
@@ -66,7 +68,7 @@ int main() {
         }
     }
     std::cout <<"num of ways to put ship in "<< counter<<std::endl;
-    gameBoard1.printBoard();
+    // gameBoard1.printBoard();
 
 
 

@@ -33,12 +33,15 @@ public:
     int getCols() const {
         return cols;
     }
+    int getSquareValue(int i, int j) const{
+        return gameBoard[i][j];
+    }
     std::vector<std::vector<int>> getBoard() const {
         return gameBoard;
     }
     void printBoard() const {
-        for (int i = 0; i < gameBoard.size(); i++) {
-            for (int j = 0; j < gameBoard[i].size(); j++)
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getCols(); j++)
                 std::cout << gameBoard[i][j] << " ";
             std::cout << std::endl;
         }
@@ -55,19 +58,16 @@ public:
     bool isSquareZero(int row, int col) const {
         bool result = false;;
         try {
-            result = gameBoard[row][col] == 0;
+            return 0 == getSquareValue(row, col);
         } catch (...) {
-            result=false; //not sure if this is the right response
+            //not sure if this is the right response
         }
         return result;
     }
     //checks for out of bounds. true if out of bounds, false if not
     bool outOfBounds(int row, int col) const {
         bool result = true;
-        if(col <= 3)
-            result = false;
-
-        if (row <= 4)
+        if(col <= getCols() && row <= getRows()) {}
             result = false;
 
         return result;
@@ -77,22 +77,21 @@ public:
         return result;
     }
     bool checkShipSpot(int rowStart, int colStart, int size, bool orientation) const {
-        bool result = false;
         if(orientation) {
             for(int i = 0; i < size; i++) {
-                if(checkSquare(rowStart, colStart+i)) {
-                    return true;
+                if(!checkSquare(rowStart, colStart+i)) {
+                    return false;
                 }
             }
         }
         else {
             for(int i = 0; i < size; i++) {
-                if(checkSquare(rowStart+i, colStart)) {
-                    return true;
+                if(!checkSquare(rowStart+i, colStart)) {
+                    return false;
                 }
             }
         }
-        return false;
+        return true;
     }
 
 

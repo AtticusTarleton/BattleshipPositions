@@ -33,6 +33,7 @@ int main() {
 
 
     //3 by 4 board with a 2 by 2 ship
+    //rows keep track of vertical, columns of horizontal
     int row=3,col=4;
     board gameBoard1 = board(row, col);
     ship ship1 = ship(3, true);;
@@ -40,6 +41,7 @@ int main() {
     std::cout <<"num of rows "<< gameBoard1.getRows()<<std::endl;
     gameBoard1.printBoard();
     int counter = 0;
+
     for (int i = 0; i < gameBoard1.getRows(); i++) {
         int j=0;
         for (j = 0; j < gameBoard1.getCols(); j++) {

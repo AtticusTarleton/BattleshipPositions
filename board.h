@@ -58,7 +58,7 @@ public:
     bool isSquareZero(int row, int col) const {
         bool result = false;;
         try {
-            return 0 == getSquareValue(row, col);
+            result= 0 == getSquareValue(row, col);
         } catch (...) {
             //not sure if this is the right response
         }
@@ -67,14 +67,20 @@ public:
     //checks for out of bounds. true if out of bounds, false if not
     bool outOfBounds(int row, int col) const {
         bool result = true;
-        if(col <= getCols() && row <= getRows()) {}
+        if(col < getCols() && row < getRows()) {
             result = false;
+        }
 
         return result;
     }
     bool checkSquare(int squareRow, int squareCol) const {
-        bool result = isSquareZero(squareRow, squareCol)&& !outOfBounds(squareRow, squareCol); //problem line
-        return result;
+        if(outOfBounds(squareRow, squareCol)) {
+            return false;
+        }
+        else if(!isSquareZero(squareRow, squareCol)) {
+            return false;
+        }
+        return true;
     }
     bool checkShipSpot(int rowStart, int colStart, int size, bool orientation) const {
         if(orientation) {

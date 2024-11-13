@@ -11,7 +11,6 @@
 //this will create the board
 class board {
 private:
-    std::string type;
     std::vector<std::vector<int>> gameBoard;
     int rows, cols;
 public:
@@ -44,14 +43,56 @@ public:
             std::cout << std::endl;
         }
     }
+    void printSquare(int row, int col) {
+        std::cout << gameBoard[row][col] << std::endl;
+    }
     //STUFF FOR THE NUMBER OF POSITIONS CHECK
     //this is a big deal for replacing stuff
     void changeSquareValue(int row, int col, int value) {
         gameBoard[row][col] = value;
     }
-    //returns true if square is empty
+    //returns true if square is empty. this could let us move faster
     bool isSquareZero(int row, int col) const {
-        return gameBoard[row][col] == 0;
+        bool result = false;;
+        try {
+            result = gameBoard[row][col] == 0;
+        } catch (...) {
+            result=false; //not sure if this is the right response
+        }
+        return result;
+    }
+    //checks for out of bounds. true if out of bounds, false if not
+    bool outOfBounds(int row, int col) const {
+        bool result = true;
+        if(col <= 3)
+            result = false;
+
+        if (row <= 4)
+            result = false;
+
+        return result;
+    }
+    bool checkSquare(int squareRow, int squareCol) const {
+        bool result = isSquareZero(squareRow, squareCol)&& !outOfBounds(squareRow, squareCol); //problem line
+        return result;
+    }
+    bool checkShipSpot(int rowStart, int colStart, int size, bool orientation) const {
+        bool result = false;
+        if(orientation) {
+            for(int i = 0; i < size; i++) {
+                if(checkSquare(rowStart, colStart+i)) {
+                    return true;
+                }
+            }
+        }
+        else {
+            for(int i = 0; i < size; i++) {
+                if(checkSquare(rowStart+i, colStart)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 

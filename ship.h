@@ -9,12 +9,11 @@
 //this will create ships of different sizes
 class ship {
 private:
-    std::string keyPoint;
     /* keyPoint is the key point where everything is determined off of
-     * could also arrange in a 2 int format
+     * could also arrange in a 2 int format.  THINK I WILL DO THIS
      */
     bool orientationV; //the idea is if horizontal its false, if vertical its true
-    int size = 0; //the size of the ship
+    int size = 0, keyPointR=0, keyPointC=0; //the size of the ship
 public:
     ship(const int size, bool orientation) {
         this->size = size;
@@ -22,8 +21,11 @@ public:
     }
 
     //getters
-    std::string getKeyPoint() const{
-        return keyPoint;
+    int getKeyPointR() const{
+        return keyPointR;
+    }
+    int getKeyPointC() const{
+        return keyPointC;
     }
     bool getOrientationV() const {
         return orientationV;
@@ -33,8 +35,11 @@ public:
     }
 
     //setters
-    void setKeyPoint(std::string &keyPoint) {
-        this->keyPoint = keyPoint; //will be used for changing locations
+    void setKeyPointR(int keyPointR) {
+        this->keyPointR = keyPointR; //will be used for changing locations
+    }
+    void setKeyPointC(int keyPointC) {
+        this->keyPointC = keyPointC; //will be used for changing locations
     }
     void setOrientationV(bool orientationV) {
         this->orientationV = orientationV;

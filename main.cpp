@@ -34,9 +34,10 @@ int main() {
 
     //3 by 4 board with a 2 by 2 ship
     //rows keep track of vertical, columns of horizontal
-    int row=3,col=4;
+    int row=2,col=2;
     board gameBoard1 = board(row, col);
-    ship ship1 = ship(3, false);;
+    ship ship1 = ship(1, true);
+    ship ship2 = ship(1, true);
     std::cout <<"num of cols "<< gameBoard1.getCols()<<std::endl;
     std::cout <<"num of rows "<< gameBoard1.getRows()<<std::endl;
     gameBoard1.printBoard();
@@ -46,12 +47,26 @@ int main() {
         int j=0;
         for (j = 0; j < gameBoard1.getCols(); j++) {
             if (gameBoard1.checkShipSpot(i,j,ship1.getSize(),ship1.getOrientationV())) {
-                counter++;
+                //counter++;
+                gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
+                //the second embedded loop.  it works :)
+                for (int q = 0; q < gameBoard1.getRows(); q++) {
+                    int w=0;
+                    for (w = 0; w < gameBoard1.getCols(); w++) {
+                        if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship1.getOrientationV())) {
+                            counter++;
+                            gameBoard1.changeShipValues(q,w,ship2.getSize(),2,ship1.getOrientationV());
+
+                            gameBoard1.resetBoard(2);
+                        }
+                    }
+                }
+                gameBoard1.resetBoard(1);
             }
         }
     }
     std::cout <<"num of ways to put ship in "<< counter<<std::endl;
-
+    gameBoard1.printBoard();
 
 
 

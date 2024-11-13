@@ -15,8 +15,8 @@ private:
     int rows, cols;
 public:
     board(int rows, int cols) {
-        this->rows = rows;
-        this->cols = cols;
+        this->rows = rows; //keep track of vertical
+        this->cols = cols; //kep track of horizontal
         for (int i = 0; i < rows; i++) {
             std::vector<int> v1;
             for (int j = 0; j < cols; j++) {
@@ -54,6 +54,37 @@ public:
     void changeSquareValue(int row, int col, int value) {
         gameBoard[row][col] = value;
     }
+    //Still have to replace values back to 0 when done
+    //have a loop function
+    void resetBoard(int value) {
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getCols(); j++) {
+                if(gameBoard[i][j] == value) {
+                    gameBoard[i][j] = 0;
+                }
+            }
+        }
+    }
+
+
+
+    void changeShipValues(int rowStart, int colStart, int size,int value, bool orientation ) {
+        if(orientation) {
+            for(int i = 0; i < size; i++) {
+                changeSquareValue(rowStart+i, colStart, value);
+            }
+        }
+        else {
+            for(int i = 0; i < size; i++) {
+                changeSquareValue(rowStart, colStart+1, value);
+            }
+        }
+    }
+
+
+
+
+
     //returns true if square is empty. this could let us move faster
     bool isSquareZero(int row, int col) const {
         bool result = false;;

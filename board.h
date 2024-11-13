@@ -85,14 +85,14 @@ public:
     bool checkShipSpot(int rowStart, int colStart, int size, bool orientation) const {
         if(orientation) {
             for(int i = 0; i < size; i++) {
-                if(!checkSquare(rowStart, colStart+i)) {
+                if(!checkSquare(rowStart+i, colStart)) {
                     return false;
                 }
             }
         }
         else {
             for(int i = 0; i < size; i++) {
-                if(!checkSquare(rowStart+i, colStart)) {
+                if(!checkSquare(rowStart, colStart+i)) {
                     return false;
                 }
             }

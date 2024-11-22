@@ -11,7 +11,7 @@
 //this will create the board
 class board {
 private:
-    std::vector<std::vector<int>> gameBoard;
+    std::vector<std::vector<int> > gameBoard;
     int rows, cols;
 public:
     board(int rows, int cols) {
@@ -36,7 +36,7 @@ public:
     int getSquareValue(int i, int j) const{
         return gameBoard[i][j];
     }
-    std::vector<std::vector<int>> getBoard() const {
+    std::vector<std::vector<int> > getBoard() const {
         return gameBoard;
     }
     void printBoard() const {

@@ -37,7 +37,7 @@ int main() {
     int row=3,col=3;
     board gameBoard1 = board(row, col);
     ship ship1 = ship(2, true);
-    ship ship2 = ship(2, true);
+    ship ship2 = ship(3, true);
     std::cout <<"num of cols "<< gameBoard1.getCols()<<std::endl;
     std::cout <<"num of rows "<< gameBoard1.getRows()<<std::endl;
     gameBoard1.printBoard();
@@ -153,7 +153,7 @@ int main() {
 
 
     std::cout <<"num of ways to put ship in "<< counter<<std::endl;
-    std::cout <<"num of iterations in total "<< numOfChecks<<std::endl; //gotta get this number down overall
+    std::cout <<"num of iterations tested in total "<< numOfChecks<<std::endl; //gotta get this number down overall
     // gameBoard1.printBoard();
 
 

@@ -63,7 +63,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -87,7 +87,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -114,7 +114,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -138,7 +138,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -184,7 +184,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -208,7 +208,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -235,7 +235,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -259,7 +259,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -310,7 +310,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -334,7 +334,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -361,7 +361,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -385,7 +385,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -427,7 +427,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -451,7 +451,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;
@@ -478,7 +478,7 @@ int main() {
                                         //counter++;
                                         gameBoard1.changeShipValues(i,j,ship1.getSize(),1,ship1.getOrientationV());
                                         //the second embedded loop.  it works :)
-                                        for (int q = 0; q < gameBoard1.getRows()-ship1.getSize()+1; q++) {
+                                        for (int q = 0; q < gameBoard1.getRows()-ship2.getSize()+1; q++) {
                                             int w=0;
                                             for (w = 0; w < gameBoard1.getCols(); w++) {
                                                 numOfChecks++;
@@ -502,7 +502,7 @@ int main() {
                                         //the second embedded loop.  it works :)
                                         for (int q = 0; q < gameBoard1.getRows(); q++) {
                                             int w=0;
-                                            for (w = 0; w < gameBoard1.getCols()-ship1.getSize()+1; w++) {
+                                            for (w = 0; w < gameBoard1.getCols()-ship2.getSize()+1; w++) {
                                                 numOfChecks++;
                                                 if (gameBoard1.checkShipSpot(q,w,ship2.getSize(),ship2.getOrientationV())) {
                                                     counter++;

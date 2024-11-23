@@ -8,3 +8,5 @@ other stuff
 
 big goals currently:
 reduce the number of iterations by as much as possible
+
+ways to create a recursive loop: have a vector with the ships, then have a recursive loop function that goes through the vector holding ships, that way i can keep track of  which ship to reference

@@ -2,7 +2,7 @@
 // Created by Atticus Tarleton on 11/12/24.
 //
 #include <iostream>
-#include <vector>
+//#include <vector>
 #include "board.h"
 #include "ship.h"
 
@@ -36,8 +36,8 @@ int main() {
     //rows keep track of vertical, columns of horizontal
     int row=3,col=3;
     board gameBoard1 = board(row, col);
-    ship ship1 = ship(2, true);
-    ship ship2 = ship(3, true);
+    ship ship1 = ship(3, true);
+    ship ship2 = ship(0, true);
     std::cout <<"num of cols "<< gameBoard1.getCols()<<std::endl;
     std::cout <<"num of rows "<< gameBoard1.getRows()<<std::endl;
     gameBoard1.printBoard();

@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(BattleshipPositions
     main.cpp
         board.h
-        ship.h)
+        ship.h
+        positionsRecursive.h)

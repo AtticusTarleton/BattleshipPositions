@@ -32,7 +32,7 @@ int main() {
     */
 
 
-/*
+
     //3 by 4 board with a 2 by 2 ship
     //rows keep track of vertical, columns of horizontal
     int row=3,col=3;
@@ -157,12 +157,18 @@ int main() {
     std::cout <<"num of iterations tested in total "<< numOfChecks<<std::endl; //gotta get this number down overall
     // gameBoard1.printBoard();
 
-*/
-/* is not working right now
+
+ /*
+// is not working right now
+//is really not working, give up on this. i think it was the passing the board by reference
+    BattleshipPositions(34281,0x10073c580) malloc: Heap corruption detected, free list is damaged at 0x600000f0d160
+*** Incorrect guard value: 112040028328192
+BattleshipPositions(34281,0x10073c580) malloc: *** set a breakpoint in malloc_error_break to debug
+
     //testing the recursion
     int row=3,col=3;
     board gameBoard1 = board(row, col);
-    ship ship1 = ship(3, true);
+    ship ship1 = ship(2, true);
     ship ship2 = ship(2, true);
     std::vector<ship> ships;
     ships.push_back(ship1);

@@ -10,9 +10,9 @@
 int numOfChecks = 0;
 int counter = 0;
 
-void calculatePositions(std::vector<ship> ships, board& gameBoard1, int location) {
+void calculatePositions(std::vector<ship> ships, board gameBoard1, int location) {
         if (location <= ships.size()) {
-                ships[0].setOrientationV(true);
+                ships[location].setOrientationV(true);
                 for (int q = 0; q < gameBoard1.getRows()-ships[location].getSize()+1; q++) {
                         int w=0;
                         for (w = 0; w < gameBoard1.getCols(); w++) {
@@ -23,11 +23,12 @@ void calculatePositions(std::vector<ship> ships, board& gameBoard1, int location
                                         }
                                         gameBoard1.changeShipValues(q,w,ships[location].getSize(),location,ships[location].getOrientationV());
                                         calculatePositions(ships, gameBoard1, location+1);
+                                        gameBoard1.printBoard();
                                         gameBoard1.resetBoard(location);
                                 }
                         }
                 }
-                ships[0].setOrientationV(false);
+                ships[location].setOrientationV(false);
                 for (int q = 0; q < gameBoard1.getRows(); q++) {
                         int w=0;
                         for (w = 0; w < gameBoard1.getCols()-ships[location].getSize()+1; w++) {
@@ -38,12 +39,16 @@ void calculatePositions(std::vector<ship> ships, board& gameBoard1, int location
                                         }
                                         gameBoard1.changeShipValues(q,w,ships[location].getSize(),location,ships[location].getOrientationV());
                                         calculatePositions(ships, gameBoard1, location+1);
+                                        gameBoard1.printBoard();
+                                        gameBoard1.resetBoard(location);
                                 }
                         }
                 }
         }
+
         std::cout <<"number of checks: "<< numOfChecks << std::endl;
         std::cout <<"number of positions: "<< counter << std::endl;
+
 }
 
 

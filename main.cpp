@@ -5,6 +5,7 @@
 //#include <vector>
 #include "board.h"
 #include "ship.h"
+#include "positionsRecursive.h"
 
 int main() {
     /*
@@ -31,7 +32,7 @@ int main() {
     */
 
 
-
+/*
     //3 by 4 board with a 2 by 2 ship
     //rows keep track of vertical, columns of horizontal
     int row=3,col=3;
@@ -156,7 +157,17 @@ int main() {
     std::cout <<"num of iterations tested in total "<< numOfChecks<<std::endl; //gotta get this number down overall
     // gameBoard1.printBoard();
 
-
-
+*/
+/* is not working right now
+    //testing the recursion
+    int row=3,col=3;
+    board gameBoard1 = board(row, col);
+    ship ship1 = ship(3, true);
+    ship ship2 = ship(2, true);
+    std::vector<ship> ships;
+    ships.push_back(ship1);
+    ships.push_back(ship2);
+    calculatePositions(ships,gameBoard1,0);
+*/
     return 0;
 }

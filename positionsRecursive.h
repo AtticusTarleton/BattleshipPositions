@@ -50,6 +50,26 @@ void calculatePositions(std::vector<ship> ships, board gameBoard1, int location)
         std::cout <<"number of positions: "<< counter << std::endl;
 
 }
+/*
+// is not working right now
+is for it i want to try again
+
+//is really not working, give up on this. i think it was the passing the board by reference
+//i did get this error though
+   BattleshipPositions(34281,0x10073c580) malloc: Heap corruption detected, free list is damaged at 0x600000f0d160
+*** Incorrect guard value: 112040028328192
+BattleshipPositions(34281,0x10073c580) malloc: *** set a breakpoint in malloc_error_break to debug
+
+   //testing the recursion
+   int row=3,col=3;
+   board gameBoard1 = board(row, col);
+   ship ship1 = ship(2, true);
+   ship ship2 = ship(2, true);
+   std::vector<ship> ships;
+   ships.push_back(ship1);
+   ships.push_back(ship2);
+   calculatePositions(ships,gameBoard1,0);
+*/
 
 
 #endif //POSITIONSRECURSIVE_H

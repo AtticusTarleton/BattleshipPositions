@@ -36,7 +36,7 @@ int main() {
     int counter = 0;
     int numOfChecks = 0;
 
-
+/*
     //vertical for ship 5 stop here for copying
     ship5.setOrientationV(true);
     for (int t = 0; t < gameBoard1.getRows()-ship5.getSize()+1; t++) {
@@ -46,7 +46,7 @@ int main() {
             if (gameBoard1.checkShipSpot(t,y,ship5.getSize(),ship5.getOrientationV())) {
                 //counter++;
                 gameBoard1.changeShipValues(t,y,ship5.getSize(),5,ship5.getOrientationV());
-
+*/
             //vertical for ship4
                 ship4.setOrientationV(true);
                 for (int z = 0; z < gameBoard1.getRows()-ship4.getSize()+1; z++) {
@@ -543,6 +543,7 @@ int main() {
                         }
                     }
                 }
+                /*
                  gameBoard1.resetBoard(5);
              }
          }
@@ -1060,7 +1061,7 @@ int main() {
          }
      }
 
-
+*/
 
     std::cout <<"num of ways to put ship in "<< counter<<std::endl;
     std::cout <<"num of iterations tested in total "<< numOfChecks<<std::endl; //gotta get this number down overall

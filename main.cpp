@@ -142,11 +142,11 @@ int main() {
     int row=10,col=10;
     board gameBoard1 = board(row, col);
     ship ship1 = ship(3, true);
-    ship ship2 = ship(5, true);
+    ship ship2 = ship(4, true);
     ship ship3 = ship(3, true);
-    ship ship4 = ship(4, true);
-    int counter = 0;
-    int numOfChecks = 0;
+    ship ship4 = ship(5, true);
+    long counter = 0;
+    long numOfChecks = 0;
              //vertical for ship4
                 ship4.setOrientationV(true);
                 for (int z = 0; z < gameBoard1.getRows()-ship4.getSize()+1; z++) {
@@ -530,7 +530,6 @@ int main() {
 */
     counter = counter*2; //the splitting it in half worked. the numOfChecks is reduced b/c i fixed an error adding time complexity
     //the assumption was that there is a 90 degree rotation of every position possible for vertical 4 ship that makes the board horizontal
-    numOfChecks = numOfChecks*2;
     std::cout <<"num of ways to put ship in "<< counter<<std::endl;
     std::cout <<"num of iterations tested in total "<< numOfChecks<<std::endl; //gotta get this number down overall
 

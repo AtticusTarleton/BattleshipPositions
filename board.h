@@ -105,10 +105,11 @@ public:
         return result;
     }
     bool checkSquare(int squareRow, int squareCol) const {
+
         if(outOfBounds(squareRow, squareCol)) {
             return false;
         }
-        else if(!isSquareZero(squareRow, squareCol)) {
+        if(!isSquareZero(squareRow, squareCol)) {
             return false;
         }
         return true;
